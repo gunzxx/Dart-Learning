@@ -1,7 +1,10 @@
 // import 'dart:io';
 
 void main(List<String> args) {
-  for (int i = 10; i > 0; i -= 2) {
+  int i = 5;
+
+  do {
     print(i);
-  }
+    i += 1;
+  } while (i <= 5);
 }
