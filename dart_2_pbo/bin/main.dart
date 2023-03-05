@@ -4,7 +4,7 @@ import 'package:dart_2_pbo/dart_2_encapsulation.dart';
 void main(List<String> arguments) {
   PersegiPanjang k1, k2;
 
-  k1 = new PersegiPanjang(); // tidak disarankan menggunakan new
+  k1 = new PersegiPanjang(); // tidak perlu menggunakan new
   k1.setPanjang(3);
   k1.setLebar(3);
   double luask1 = k1.luas();
