@@ -52,6 +52,6 @@ class PersegiPanjang {
     if (value < 0) {
       value * -1;
     }
-    _lebar = value;
+    _panjang = value;
   }
 }
