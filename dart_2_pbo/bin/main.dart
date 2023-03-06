@@ -10,8 +10,8 @@ void main(List<String> arguments) {
   double luask1 = k1.luas();
 
   k2 = PersegiPanjang();
-  k2.setPanjang(5);
-  k2.setLebar(5);
+  k2.panjang = 5;
+  k2.lebar = 5;
   double luask2 = k2.luas();
 
   print("Luas kotak 1 = $luask1");
