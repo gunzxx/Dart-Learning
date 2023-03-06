@@ -1,9 +1,23 @@
-class Hero {
+class Character {
   int _healthpoint;
 
   int get healthpoint => _healthpoint;
   set healthpoint(int value) =>
       _healthpoint = (value > 0 ? value : (value * -1));
+}
 
-  String killAmonster() => "Take this!!";
+class Hero extends Character {
+  String killMonster() => "Take this!!";
+}
+
+class Monster extends Character {
+  String eatHuman() => "Ruarrrghh!!";
+}
+
+class MonsterSerigala extends Monster {
+  String au() => "Auuuu";
+}
+
+class MonsterIkan extends Monster {
+  String swim() => "Woossh!!";
 }
