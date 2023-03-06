@@ -16,9 +16,9 @@ void main(List<String> arguments) {
 
   print((kucing as MonsterIkan).swim());
 
-  // for (Monster m in listOfMonster) {
-  //   if (m is MonsterKucing) {
-  //     print(m.face());
-  //   }
-  // }
+  for (Monster m in listOfMonster) {
+    if (m is MonsterSerigala) {
+      print(m.au());
+    }
+  }
 }
