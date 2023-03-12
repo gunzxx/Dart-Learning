@@ -14,10 +14,10 @@ class Monster extends Character {
   String eatHuman() => "Ruarrrghh!!";
 }
 
-class MonsterSerigala extends Monster {
-  String au() => "Auuuu";
+class MonsterDarat extends Monster {
+  String walk() => "wlkwlk";
 }
 
-class MonsterIkan extends Monster {
+class MonsterLaut extends Monster {
   String swim() => "Woossh!!";
 }
