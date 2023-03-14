@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 class Person {
   String nama, umur;
   Person(this.nama, {this.umur = "20"}) {
