@@ -1,12 +1,9 @@
 class Person {
   String nama;
-  Function(String nameI) doingHobby;
+  int umur;
+  static int maxU = 150;
 
-  Person(this.nama, {this.doingHobby});
-
-  void takeRest() {
-    if (doingHobby != null) {
-      doingHobby(nama);
-    }
+  Person(this.nama, int umur) {
+    this.umur = (umur > Person.maxU) ? Person.maxU : umur;
   }
 }
