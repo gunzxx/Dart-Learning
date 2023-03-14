@@ -1,10 +1,10 @@
 import 'package:dart_2_pbo/dart_6_constructor.dart';
-import 'dart:io';
+// import 'dart:io';
 
 void main(List<String> arguments) {
-  var input = stdin.readLineSync();
-  print('kamu mencetak = $input');
+  Person n = Person("Joko", umur: "20");
+  print(n.umur);
 
-  Person n = Person(name: "Joko");
-  print(n.name);
+  Person murid = Student(kelas: "2");
+  print(murid.umur);
 }
