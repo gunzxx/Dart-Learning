@@ -1,7 +1,4 @@
-import 'package:dart_2_pbo/dart_7_parameter_underscore.dart';
+import 'package:dart_2_pbo/dart_8_static.dart';
 // import 'dart:io';
 
-void main(List<String> arguments) {
-  Person p = Person("Coba", doingHobby: (_) => print("nama"));
-  p.takeRest();
-}
+void main(List<String> arguments) {}
