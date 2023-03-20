@@ -1,25 +1,44 @@
-import 'package:dart_2_pbo/dart_12_enum_cascade.dart';
-import 'dart:io';
+// import 'package:dart_2_pbo/dart_12_enum_cascade.dart';
+// import 'dart:io';
+
+/**
+ * Enum
+ * Cascade (..)
+ */
 
 void main(List<String> args) {
-  var box = Saldo<String>('100', '123');
-  stdout.write("Masukkan pin : ");
-  String pin = stdin.readLineSync();
-  print(box.getData(pin));
+  MonsterUcoa m = MonsterUcoa(status: UcoaStatus.confused);
 
-  var box2 = Saldo<DateTime>(DateTime.now(), '123');
-  stdout.write("Masukkan pin : ");
-  String pin2 = stdin.readLineSync();
-  print(box2.getData(pin2));
+  print("Hello world");
 
-  var box3 = Saldo<Person>(Person("Coba"), '123');
-  stdout.write("Masukkan pin : ");
-  String pin3 = stdin.readLineSync();
-  print(box3.getData(pin3).name);
+  m
+    ..move()
+    ..eat();
 }
 
-class Person {
-  final String name;
+enum UcoaStatus { normal, poisened, confused }
 
-  Person(this.name);
+class MonsterUcoa {
+  final UcoaStatus status; // 1: Normal; 2 : Poisoned; 3 : Consfused
+
+  MonsterUcoa({this.status = UcoaStatus.normal});
+
+  void move() {
+    switch (status) {
+      case UcoaStatus.normal:
+        print("Ucoa is moving");
+        break;
+      case UcoaStatus.poisened:
+        print("Ucoa is poisoned");
+        break;
+      case UcoaStatus.confused:
+        print("Ucoa is confused");
+        break;
+      default:
+    }
+  }
+
+  void eat() {
+    print("Ucoa is eating");
+  }
 }
