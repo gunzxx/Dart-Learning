@@ -1,15 +1,9 @@
-import 'package:dart_2_pbo/dart_9_async_await.dart';
+import 'package:dart_2_pbo/dart_8_static.dart';
 // import 'dart:io';
 
 void main(List<String> arguments) async {
-  var p = Person();
+  Person.maxU = 19;
+  var p = Person('Guntur', 20);
 
-  print("get 1");
-  print("get 2");
-
-  p.getDataAsync().then((_) {
-    print('get 3 : ${p.nama}');
-  });
-
-  print("get 4");
+  print(p.umur);
 }
