@@ -2,6 +2,7 @@ void main(List<String> args) {
   List<Person> persons = [
     Person("Admin", 12),
     Person("User", 31),
+    Person("Coba", 42),
     Person("Admin", 23),
     Person("Merchant", 32),
     Person("Admin", 24),
@@ -12,9 +13,20 @@ void main(List<String> args) {
   ];
 
   // persons.sort((p1, p2) => p1.umur.compareTo(p2.umur));
+
+  // dengan bobot
+  // persons.sort((p1, p2) {
+  //   if (p1.role.compareTo(p2.role) != 0) {
+  //     return p1.role.compareTo(p2.role);
+  //   } else {
+  //     return p1.umur.compareTo(p2.umur);
+  //   }
+  // });
+
+  // dengan bobot
   persons.sort((p1, p2) {
-    if (p1.role.compareTo(p2.role) != 0) {
-      return p1.role.compareTo(p2.role);
+    if (p1.bobotRole - p2.bobotRole != 0) {
+      return p1.bobotRole - p2.bobotRole;
     } else {
       return p1.umur.compareTo(p2.umur);
     }
@@ -30,4 +42,15 @@ class Person {
   final int umur;
 
   Person(this.role, this.umur);
+
+  int get bobotRole {
+    switch (role) {
+      case "Admin":
+        return 3;
+      case "Merchant":
+        return 2;
+      default:
+        return 1;
+    }
+  }
 }
