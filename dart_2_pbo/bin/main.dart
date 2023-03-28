@@ -14,7 +14,7 @@ void main(List<String> args) {
 
   // persons.sort((p1, p2) => p1.umur.compareTo(p2.umur));
 
-  // dengan bobot
+  // dengan compareTo()
   // persons.sort((p1, p2) {
   //   if (p1.role.compareTo(p2.role) != 0) {
   //     return p1.role.compareTo(p2.role);
@@ -28,9 +28,18 @@ void main(List<String> args) {
     if (p1.bobotRole - p2.bobotRole != 0) {
       return p1.bobotRole - p2.bobotRole;
     } else {
-      return p1.umur.compareTo(p2.umur);
+      return p1.role.compareTo(p2.role);
     }
   });
+
+  // gabungan
+  // persons.sort((p1, p2) {
+  //   if (p1.bobotRole - p2.bobotRole != 0) {
+  //     return p1.bobotRole - p2.bobotRole;
+  //   } else {
+  //     return p1.role.compareTo(p2.role);
+  //   }
+  // });
 
   persons.forEach((element) {
     print(element.role + " = " + element.umur.toString());
