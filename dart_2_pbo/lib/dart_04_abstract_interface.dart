@@ -47,12 +47,12 @@ class MonsterLaut extends Monster {
   }
 }
 
-abstract class Flying_Monster {
+abstract class FlyingMonster {
   String fly();
 }
 
 class MonsterLautUdara extends MonsterLaut
-    implements Flying_Monster, BasketSkill {
+    implements FlyingMonster, BasketSkill {
   @override
   String fly() {
     return "Mengambang";

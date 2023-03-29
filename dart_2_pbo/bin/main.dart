@@ -41,18 +41,16 @@ void main(List<String> args) {
         return p2.role.compareTo(p1.role);
       } else {
         return p1.umur.compareTo(p2.umur);
-        // if (p1.umur.compareTo(p2.umur) != 0) {
-        // } else {
-        //   return p2.role.compareTo(p1.role);
-        // }
-        // return p2.bobotRole - p1.bobotRole;
       }
     }
   });
 
-  persons.forEach((element) {
-    print(element.role + " = " + element.umur.toString());
-  });
+  for (var i = 0; i < persons.length; i++) {
+    print("${persons[i].role} = ${persons[i].umur}");
+  }
+  // persons.forEach((element) {
+  //   print(element.role + " = " + element.umur.toString());
+  // });
 }
 
 class Person {

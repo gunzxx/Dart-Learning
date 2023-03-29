@@ -1,13 +1,11 @@
 // import 'package:dart_2_pbo/dart_10_final_const.dart';
 // import 'dart:io';
 
-/**
-Tipe variabel berdasarkan lokasi
- * Top level => variabel di luar fungsi main
- * Variabel global => variabel luar yang bisa diakses dimana saja
- * Variabel lokal => variabel di dalam scope sebuah fungsi
- * Static
- */
+//Tipe variabel berdasarkan lokasi
+/// Top level => variabel di luar fungsi main
+/// Variabel global => variabel luar yang bisa diakses dimana saja
+/// Variabel lokal => variabel di dalam scope sebuah fungsi
+/// Static
 
 const pi = 3.14; // variabel top level / global
 

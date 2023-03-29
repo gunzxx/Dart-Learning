@@ -1,10 +1,8 @@
 // import 'package:dart_2_pbo/dart_12_enum_cascade.dart';
 // import 'dart:io';
 
-/**
- * Enum
- * Cascade (..)
- */
+/// Enum
+/// Cascade (..)
 
 void main(List<String> args) {
   MonsterUcoa m = MonsterUcoa(status: UcoaStatus.confused);
