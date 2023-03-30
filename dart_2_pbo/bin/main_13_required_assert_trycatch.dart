@@ -5,19 +5,24 @@ import 'package:meta/meta.dart';
 void main(List<String> args) {
   Person p;
   try {
-    p = Person(name: null);
+    p = Person("Coba", age: 12, fullname: null);
   } catch (e) {
     print(e);
   }
 
-  print(p.age);
+  print(p.fullname);
 }
 
 class Person {
+  String fullname;
   final String name;
   final int age;
 
-  Person({@required this.name, this.age = 0}) {
-    assert(name != null, "Must a string name");
+  // Person({@required this.name, this.age = 0}) {
+  //   assert(name != null, "Must a string name");
+  // }
+
+  Person(this.name, {this.age = 0, @required this.fullname}) {
+    assert(fullname != null, "Must a string name");
   }
 }
