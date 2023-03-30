@@ -1,63 +1,35 @@
-import 'dart:io';
+/// SIngleton = satu class untuk satu objek
 
-void main(List<String> args) {
-  Hero a = Hero(12);
-  Hero b = Hero(10);
+void main(List<String> args) async {
+  Service service = Service();
 
-  // Cara ke-1
-  Hero c = (a + b);
-  stdout.write("Cara 1 :");
-  print(c.power);
+  User user = await service.getUserData();
 
-  // Cara ke-2
-  stdout.write("Cara 2 :");
-  print((a + b).power);
+  ServiceSingleton service1 = ServiceSingleton();
+  ServiceSingleton service2 = ServiceSingleton();
 
-  // Cara ke-3
-  Coba coba = Coba();
-  print(a + coba); // return class Hero
-
-  // coba 1
-  print(a == coba); // return false
-
-  // coba 2
-  print(a > b); // return true
-  print(a > b.power); // return false
+  print(service1 == service2);
 }
 
-class Hero {
-  final int power;
+class User {}
 
-  Hero(this.power);
-
-  Hero operator +(var lain) {
-    if (lain is Hero) {
-      return Hero(power + lain.power);
-    } else if (lain is int) {
-      return Hero(power + lain);
-    } else {
-      return this; // mengembalikan class Hero
-    }
-  }
-
-  @override
-  bool operator ==(var lain) {
-    if (lain is Hero) {
-      if (lain.power == power) {
-        return true;
-      }
-    }
-    return false;
-  }
-
-  bool operator >(var lain) {
-    if (lain is Hero) {
-      if (lain.power < power) {
-        return true;
-      }
-    }
-    return false;
+class Service {
+  Future<User> getUserData() async {
+    return User();
   }
 }
 
-class Coba {}
+class ServiceSingleton {
+  static final ServiceSingleton _objekTujuan = ServiceSingleton._pribadi();
+
+  ServiceSingleton._pribadi();
+
+  // factory = method yang dapat mengembalikan objek yang classnya sama dengan class tersebut, bisa objek baru ataupun objek yang lama
+  factory ServiceSingleton() {
+    return _objekTujuan;
+  }
+
+  Future<User> getUserData() async {
+    return User();
+  }
+}
