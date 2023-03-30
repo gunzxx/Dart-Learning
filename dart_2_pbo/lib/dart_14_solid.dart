@@ -6,7 +6,6 @@ void main(List<String> args) {
   /// Open to extension, maksudnya setap class dapat ditambah fitur tapi tidak mengubah classnya. Caranya yaitu bisa menggunakan polimorphism
 
   /// L-iskov Subtitutioin Principle
-  /// Memaintaince / mengganti sebuah tetapi tetap sama tujuan utamanya
 
   /// I-nterface Segregation Principle
 
@@ -40,23 +39,7 @@ class SuperRobot {
 }
 
 /// Liskov subtition principle
-class Bebek {
-  berenang() {
-    //... (melakukan sesuatu)
-  }
-  suara() {
-    //... (melakukan sesuatu)
-  }
-  makan() {
-    //... (melakukan sesuatu)
-  }
-}
 
-class SuperBebek {
-  @override
-  makan() {
-    // tidak melakukan apa"
-  }
-}
 
 /// 
+
